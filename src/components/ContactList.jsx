@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ContactRow from "./ContactRow";
 
-export default function ContactList() {
+export default function ContactList({ setSelectedContactId }) {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
@@ -11,9 +11,8 @@ export default function ContactList() {
           "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users"
         );
         const result = await response.json();
-        console.log("Fetched Contacts:", result); // Debugging step
+        console.log("Fetched Contacts:", result);
 
-        // Ensure correct data structure before setting state
         const formattedContacts = result.map(user => ({
           id: user.id,
           name: user.name,
@@ -44,7 +43,11 @@ export default function ContactList() {
       </thead>
       <tbody>
         {contacts.map((contact) => (
-          <ContactRow key={contact.id} contact={contact} />
+          <ContactRow 
+            key={contact.id} 
+            contact={contact} 
+            setSelectedContactId={setSelectedContactId} 
+          />
         ))}
       </tbody>
     </table>
