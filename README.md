@@ -1,5 +1,20 @@
 # React + Vite
 
+# Contact List App
+
+This is a React-based Contact List app built with React and Vite. It fetches and displays contacts from an external API.
+
+## Features
+- Fetches a list of contacts from an external API
+- Click on a contact to view more details
+- Uses `useState` and `useEffect` for state and data fetching
+
+## Tech
+- React with Vite
+- JavaScript 
+- Fetch API 
+- CSS for styling
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
