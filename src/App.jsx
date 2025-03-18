@@ -1,9 +1,10 @@
 import './App.css';
+import ContactList from "./components/ContactList";
 
 function App() {
   return (
     <div>
-      {/* Your app starts here */}
+      <ContactList />
     </div>
   );
 }
